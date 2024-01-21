@@ -1,4 +1,5 @@
-// Variables to hold user and lesson data
+document.addEventListener('DOMContentLoaded', function() {
+  // Variables to hold user and lesson data
 var userId, courseId, chapterId, lessonId, questionId;
 
 function checkUserProgress() {
