@@ -94,6 +94,10 @@ $(document).ready(function() {
 
   // Event delegation for handling button clicks
   $(document).on('click', '.guidem-button', function() {
+    if ($(this).text() === 'Completed' || $(this).prop('disabled')) {
+      return; // Don't proceed with submission if already completed
+    }
+
     if (isBanned()) {
       toastr.error(`Hi ${userFirstName}, you are temporarily banned from submitting answers.`);
       return;
