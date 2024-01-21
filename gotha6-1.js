@@ -258,7 +258,7 @@ $(document).ready(function() {
 
             // Sending the data with AJAX
             $.ajax({
-              url: '/your-server-endpoint', // Replace with your server endpoint
+              url: 'https://sb1.guidem.ph/checkuserprogress', // Replace with your server endpoint
               type: 'POST',
               contentType: 'application/json',
               data: JSON.stringify(submissionData),
