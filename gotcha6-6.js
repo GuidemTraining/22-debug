@@ -198,15 +198,9 @@ $(document).ready(function() {
             // Prepare the data object with captured variables
             var submissionData = {
               courseId: courseId,
-              courseName: courseName,
-              courseSlug: courseSlug,
               lessonId: lessonId,
-              lessonName: lessonName,
-              lessonSlug: lessonSlug,
               chapterId: chapterId,
-              chapterName: chapterName,
               userId: userId,
-              userEmail: userEmail,
               questionId: questionId,
               answer: inputValue
             };
