@@ -4,8 +4,8 @@ $(document).ready(function() {
   var incorrectAttempts = 0; // Track incorrect attempts
   var banEndTime = 0; // Time when the ban ends (initially set to 0)
   var completedTasks = 0; // Track completed tasks
-  var totalTasks = 10; // Total number of tasks/questions
-
+  totalTasks = $('.guidem-button').length;
+  
   // Function to check if the user is banned
   function isBanned() {
     const currentTime = Date.now();
@@ -16,6 +16,12 @@ $(document).ready(function() {
   function resetIncorrectAttempts() {
     incorrectAttempts = 0;
     banEndTime = 0;
+  }
+  // Function to update the progress bar
+  function updateProgressBar(completedTasks, totalTasks) {
+    const progressPercentage = (completedTasks / totalTasks) * 100;
+    $('#progressBar').css('width', progressPercentage + '%').attr('aria-valuenow', progressPercentage);
+    $('#progressBarLabel').text(`Progress: ${completedTasks} out of ${totalTasks}`);
   }
 
   // Function to display a hint modal for a specific question ID
