@@ -114,6 +114,7 @@ $(document).ready(function() {
         questionId: questionId,
         answer: inputValue
       };
+      console.log('Data to be submitted to /submitdata:', submissionData); // Log the data to be submitted
 
       $.ajax({
         url: 'https://sb1.guidem.ph/submitdata', // Replace with your server endpoint
